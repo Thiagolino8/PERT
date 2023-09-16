@@ -27,4 +27,4 @@ Therefore, the estimate for these tasks is seven days and 17 hours.
 
 ## app
 
-You can use the PERT app to calculate the time estimate for a task. The app is available at <https://pert-eight.vercel.com/>
+You can use the PERT app to calculate the time estimate for a task. The app is available at <https://pert-eight.vercel.app/>
