@@ -48,7 +48,7 @@
 			<Form.Field {config} name="pessimistic">
 				<Form.Item>
 					<Form.Label>Pessimistic</Form.Label>
-					<Form.Input min={$superForm?.optimistic ?? 0} type="number" />
+					<Form.Input min={$superForm?.most_likely ?? 0} type="number" />
 					<Form.Description>
 						Includes everything that could go wrong when performing this task
 					</Form.Description>
