@@ -23,7 +23,7 @@ R = (5 + 28 + 10) / 6
 R = 43 / 6
 R = 7.17 days
 
-Therefore, the estimate for these tasks is seven days and 17 hours.
+Therefore, the estimate for these tasks is seven days and 4 hours.
 
 ## app
 
