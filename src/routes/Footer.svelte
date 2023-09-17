@@ -30,8 +30,8 @@
 </ul>
 </footer>
 
-<style>
+<style lang="postcss">
 	svg {
-		@apply w-6 h-6 fill-slate-400;
+		@apply w-6 h-6 fill-slate-400 hover:fill-slate-300;
 	}
 </style>

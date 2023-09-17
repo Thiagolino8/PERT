@@ -5,11 +5,8 @@
 	import * as Card from '../lib/components/ui/card';
 	import { PERT_schema, type PERT_schema_Type } from './schema';
 	import FormUnwrapper from './FormUnwrapper.svelte';
-	import { writable } from 'svelte/store';
 
 	export let form: SuperValidated<PERT_schema_Type> & { result?: number };
-
-	const superForm = writable<typeof form['data']>(form?.data)
 </script>
 
 <Card.Root>
@@ -26,7 +23,7 @@
 	</Card.Header>
 	<Card.Content>
 		<Form.Root method="POST" {form} schema={PERT_schema} let:config>
-			<FormUnwrapper form={config.form.form} {superForm}>
+			<FormUnwrapper form={config.form.form} let:superForm>
 			<Form.Field {config} name="optimistic">
 				<Form.Item>
 					<Form.Label>Optimistic</Form.Label>
@@ -38,7 +35,7 @@
 			<Form.Field {config} name="most_likely">
 				<Form.Item>
 					<Form.Label>Most Likely</Form.Label>
-					<Form.Input min={$superForm?.optimistic ?? 0} type="number" />
+					<Form.Input min={superForm?.optimistic ?? 0} type="number" />
 					<Form.Description
 						>You have a 50% chance of completing the task at this time
 					</Form.Description>
@@ -48,7 +45,7 @@
 			<Form.Field {config} name="pessimistic">
 				<Form.Item>
 					<Form.Label>Pessimistic</Form.Label>
-					<Form.Input min={$superForm?.most_likely ?? 0} type="number" />
+					<Form.Input min={superForm?.most_likely ?? 0} type="number" />
 					<Form.Description>
 						Includes everything that could go wrong when performing this task
 					</Form.Description>

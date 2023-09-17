@@ -3,9 +3,6 @@
 
 	type T = $$Generic
 	export let form: Writable<T>
-	export let superForm: Writable<T>
-
-	$: $superForm = $form
 </script>
 
-<slot/>
+<slot superForm={$form}/>
