@@ -1,15 +1,15 @@
 <script>
+	import Footer from './Footer.svelte'
 	import '../app.postcss';
 </script>
 
-<main>
+<main class="grid place-content-center">
 	<slot />
 </main>
+<Footer />
 
 <style>
-	main {
-		display: grid;
-		place-content: center;
-		min-height: 100dvh;
+	:global(body) {
+		@apply grid grid-rows-[1fr_auto] gap-4 h-screen;
 	}
 </style>
