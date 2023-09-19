@@ -16,7 +16,7 @@ export const actions = {
 				form
 			});
 		}
-		const result = (form.data.most_likely + (4 * form.data.optimistic) + form.data.pessimistic) / 6;
+		const result = (form.data.optimistic + (4 * form.data.most_likely) + form.data.pessimistic) / 6;
 		return {
 			form,
 			result
